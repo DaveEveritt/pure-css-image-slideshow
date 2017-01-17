@@ -1,0 +1,39 @@
+body {
+  background: #000;
+  color: #999;
+}
+p {
+  text-align: center;
+}
+a {
+  color: #aaa;
+}
+
+.slideshow {
+  margin: 2em auto 1em;
+  width: 500px; /* altering this breaks the centering??? */
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideshow img {
+  position: absolute;
+  width: 500px;
+  animation: round 16s infinite;
+  opacity: 0;
+}
+
+@keyframes round {
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+img:nth-child(1) { animation-delay: 12s; }
+img:nth-child(2) { animation-delay: 8s; }
+img:nth-child(3) { animation-delay: 4s; }
+img:nth-child(4) { animation-delay: 0s; }
