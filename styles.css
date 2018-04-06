@@ -10,23 +10,23 @@ p { text-align: center; }
 a { color: #aaa; }
 
 .slideshow {
-  margin: 2em auto 1em;
-  width: var(--picWidth);
-  height: 448px;
-  /* prevent hidden parts of images showing outside the container: */
-  overflow: hidden;
   /* set the positioning context for the images */
   position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  width: var(--picWidth);
+  height: 448px;
   /* uncomment to check if colour shows below images - if so, reduce height: */
   /* background: red; */
 }
 
 .slideshow img {
-  /* stack all images on top of each other: */
+  /* position all images on top of each other: */
   position: absolute;
   width: var(--picWidth);
-  animation: round 21s infinite;
   opacity: 0;
+  /* set the duration to match nth-child(1): */
+  animation: round 21s infinite;
 }
 
 @keyframes round {
